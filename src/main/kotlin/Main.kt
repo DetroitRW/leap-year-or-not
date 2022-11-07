@@ -8,11 +8,11 @@ fun main(args: Array<String>) {
     val y = reader.nextInt()
 
     val result = if (y % 4 == 0) {
-        "Високостный год"
+        "Високосный год"
     } else if (y % 400 == 0) {
-        "Не високостный год"
+        "Не високосный год"
     } else {
-        "Не високостный год"
+        "Не високосный год"
     }
-    print(result)
+    print("$y - $result")
 }
