@@ -7,12 +7,17 @@ fun main(args: Array<String>) {
     print("Введите год: ")
     val y = reader.nextInt()
 
-    val result = if (y % 4 == 0) {
-        "Високосный год"
-    } else if (y % 400 == 0) {
-        "Не високосный год"
+    val nonLeap = "Не високосный год"
+    val leap = "Високосный год"
+
+    val result = if (y % 400 == 0) {
+        leap
+    } else if (y % 100 == 0) {
+        nonLeap
+    } else if (y % 4 == 0) {
+        leap
     } else {
-        "Не високосный год"
+        nonLeap
     }
     print("$y - $result")
 }
